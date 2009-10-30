@@ -1,0 +1,31 @@
+/*menu---------------------------------------------------------------------------------------------------*/
+#menu {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+}
+.menuItem {
+    padding: 0;
+    position: relative;
+}
+/*-------------------------------------------------------------------------------------------------------/*
+
+/*Adaptacao dos conceitos apresentados na folha de estilo minislide--------------------------------------*/
+#menu {
+    padding-top: 6px;
+}
+.menuItem a {
+    display: inline-block;
+    line-height: 19px;
+    text-decoration: none;
+    padding-top: 6px;
+}
+.menuItem a:hover {
+    padding-top: 1px;
+    border-top: 5px solid #000;
+}
+/*-------------------------------------------------------------------------------------------------------*/
