@@ -1,0 +1,57 @@
+from djando.db import models
+class TipoPessoa(models.Model)
+    pessoa =
+    tipo_usuario =
+    login =
+    senha =
+class TipoAcesso(models.Model):
+    descricao_tipo =
+    visualiza =
+    adiciona =
+    modifica =
+    apaga =
+    ''' verificar possibilidades de transacao '''
+class Contato(models.Model):
+    email =
+    telefone =
+    celular =
+    endereco_logradouro =
+    endereco_numero =
+    endereco_complemento =
+    endereco_bairro =
+    endereco_cidade =
+    endereco_uf =
+    endereco_cep =
+class Pessoa(models.Model):
+    primeiro_nome = 
+    ultimo_nome =
+    tipo_pessoa =
+    data_nasc =
+    genero =
+    contato =
+class TipoModalidade(models.Model):
+    descricao =
+    categoria =
+class TipoPosicao(models.Model):
+    descricao =
+    modalidade =
+class Atleta(models.Model):
+    pessoa =
+    modalidade =
+    posicao =
+    data_inicio =
+class Tecnico(models.Model):
+    pessoa =
+    modalidade =
+    formacao =
+class TipoAvaliador(models.Model):
+    descricao_avaliacao =
+    data_inicio =
+class Avaliador(models.Model):
+    pessoa =
+    formacao =
+    avaliacao =
+    data_inicio_trabalho =
+class Avaliacao(models.Model):
+    data_inicio_avaliacao =
+    data_fim_avaliacao =
