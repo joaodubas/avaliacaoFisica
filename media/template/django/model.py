@@ -32,7 +32,7 @@ class Pessoa(models.Model):
 class TipoModalidade(models.Model):
     descricao =
     categoria =
-class TipoPosicao(models.Model):
+class tipoPosicao(models.Model):
     descricao =
     modalidade =
 class Atleta(models.Model):
@@ -52,6 +52,6 @@ class Avaliador(models.Model):
     formacao =
     avaliacao =
     data_inicio_trabalho =
-class Avaliacao(models.Model):
+class avaliacao(models.Model):
     data_inicio_avaliacao =
     data_fim_avaliacao =

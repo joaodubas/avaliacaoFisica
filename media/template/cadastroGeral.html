@@ -3,24 +3,145 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
     <title>Sketch site</title>
-    <link rel='stylesheet' media='all' href='./reset.css' />
-    <link rel='stylesheet' media='all' href='./basic.css' />
+    <link rel='stylesheet' media='all' href='./css/reset.css' />
+    <link rel='stylesheet' media='all' href='./css/basic.css' />
 </head>
 <body>
     <div id='pageContainer'>
         <div id='headerContainer'>
-            <h1 id='logoImage'><a href='#'>Avaliação Física</a></h1>
+            <h1 id='avaliacaoLogo'><a href='#'>Phys</a></h1>
+            <h2 id='avaliacaoSlogan'>Avalia&ccedil;&atilde;o F&iacute;sica</h2>
+            <ul id='navContainer'>
+                <li id='home'><a href='#' title='' accesskey='h'>Home</a></li>
+                <li id='cadastro'><a href='#' title='' accesskey='c'>Cadastro</a></li>
+                <li id='avaliacao'><a href='#' title='' accesskey='v'>Avalia&ccedil;&atilde;o</a></li>
+                <li id='relatorio'><a href='#' title='' accesskey='r'>Relat&oacute;rio</a></li>
+                <li id='agenda'><a href='#' title='' accesskey='a'>Agenda</a></li>
+                <li id='suporte'><a href='#' title='' accesskey='s'>Suporte</a></li>
+                <li id='ajuda'><a href='#' title='' accesskey='j'>Ajuda</a></li>
+            </ul>
             <div id='breadCrumb'>&nbsp;</div>
         </div>
-        <ul id='navContainer'>
-            <li id='home'><a href='#'>Home</a></li>
-            <li id='cadastro'><a href='#'>Cadastro</a></li>
-            <li id='avaliacao'><a href='#'>Avaliaçao</a></li>
-            <li id='suporte'><a href='#'>Suporte</a></li>
-            <li id='ajuda'><a href='#'>Ajuda</a></li>
-        </ul>
         <div id='mainContainer'>
-            <div id='contentContainer'></div>
+            <div id='contentContainer'>
+                <form method='post' action='_self' id='cadastroAvaliadores'>
+                    <fieldset id='dadosPessoais'>
+                        <legend id='dadosPessoaisLegenda'>Dados Pessoais</legend>
+                        <label for='primeiroNome'>
+                            <span class='rotulo'>Primeiro nome</span>
+                            <span class='campo'><input type='text' id='primeiroNome' maxlength='50'/></span>
+                        </label>
+                        <label for='sobreNome'>
+                            <span class='rotulo'>Sobrenome</span>
+                            <span class='campo'><input type='text' id='sobreNome' maxlength='50'/></span>
+                        </label>
+                        <label for='dataNascimento'>
+                            <span class='rotulo'>Data de nascimento</span>
+                            <span class='campo'><input type='text' id='dataNascimento' maxlength='10'/></span>
+                        </label>
+                        <fieldset id='generoOpcao'>
+                            <legend id='generoOpcaoLegenda'>Gênero</legend>
+                            <label for='generoFeminino'>
+                                <span class='checkRadio'><input type='radio' id='generoFeminino' name='genero'/></span>
+                                <span class='rotuloCheckRadio'>Feminino</span>
+                            </label>
+                            <label for='generoMasculino'>
+                                <span class='checkRadio'><input type='radio' id='generoMasculino' name='genero'/></span>
+                                <span class='rotuloCheckRadio'>Masculino</span>
+                            </label>
+                        </fieldset>
+                    </fieldset>
+                    <fieldset id='dadosContato'>
+                        <legend id='dadosContatoLegenda'>Dados Contato</legend>
+                        <label for='email'>
+                            <span class='rotulo'>Email</span>
+                            <span class='campo'><input type='text' id='email' maxlength='50'/></span>
+                        </label>
+                        <label for='telefoneResidencial'>
+                            <span class='rotulo'>Telefone residencial</span>
+                            <span class='campo'><input type='text' id='telefoneResisdencial' maxlength='13'/></span>
+                        </label>
+                        <label for='telefoneComercial'>
+                            <span class='rotulo'>Telefone comercial</span>
+                            <span class='campo'><input type='text' id='telefoneComercial' maxlength='13'/></span>
+                        </label>
+                        <label for='telefoneCelular'>
+                            <span class='rotulo'>Celular</span>
+                            <span class='campo'><input type='text' id='telefoneCelular' maxlength='13'/></span>
+                        </label>
+                    </fieldset>
+                    <fieldset id='dadosEndereco'>
+                        <legend id='dadosEnderecoLegend'>Endereço</legend>
+                        <label for='logradouro'>
+                            <span class='rotuloSelect'>Logradouro</span>
+                            <span class='campo'>
+                                <select id='logradouro'>
+                                    <option value='1'>Rua</option>
+                                    <option value='2'>Avenida</option>
+                                    <option value='3'>Praça</option>
+                                    <option value='4'>Parque</option>
+                                    <option value='5'>Praça</option>
+                                </select>
+                            </span>
+                        </label>
+                        <label for='endereco'>
+                            <span class='rotulo'>Endereço</span>
+                            <span class='campo'><input type='text' id='endereco' maxlength='200'/></span>
+                        </label>
+                        <label for='enderecoComplemento'>
+                            <span class='rotulo'>Complemento</span>
+                            <span class='campo'><input type='text' id='enderecoComplemento' maxlength='20'/></span>
+                        </label>
+                        <label for='bairro'>
+                            <span class='rotulo'>Bairro</span>
+                            <span class='campo'><input type='text' id='bairro' maxlength='200'/></span>
+                        </label>
+                        <label for='cep'>
+                            <span class='rotulo'><abbr title='Código de endereçamento postal'>CEP</abbr></span>
+                            <span class='campo'><input type='text' id='cep' maxlength='9'/></span>
+                        </label>
+                        <label for='cidade'>
+                            <span class='rotulo'>Cidade</span>
+                            <span class='campo'><input type='text' id='cidade' maxlength='50'/></span>
+                        </label>
+                        <label for='estado'>
+                            <span class='rotuloSelect'>Estado</span>
+                            <span class='campo'>
+                                <select id='estado'>
+                                    <option value='1'>AC</option>
+                                    <option value='2'>SP</option>
+                                    <option value='3'>SC</option>
+                                </select>
+                            </span>
+                        </label>
+                    </fieldset>
+                    <fieldset id='dadosTitulacao'>
+                        <legend id='dadosTitulacaoLegend'>Titulação</legend>
+                        <fieldset id='dadosGraduacao'>
+                            <legend id='dadosGraduacaoLegend'>Graduação</legend>
+                            <label for='cursoGraduacao'>
+                                <span class='rotulo'>Curso</span>
+                                <span class='campo'><input type='text' id='cursoGraduacao' maxlength='50'/></span>
+                            </label>
+                            <label for='universidadeGraduacao'>
+                                <span class='rotulo'>Universidade</span>
+                                <span class='campo'><input type='text' id='universidadeGraduacao' maxlength='50'/></span>
+                            </label>
+                        </fieldset>
+                        <fieldset id='dadosEspecializacao'>
+                            <legend id='dadosEspecializacaoLegend'>Especialização</legend>
+                            <label for='cursoEspecializacao'>
+                                <span class='rotulo'>Curso</span>
+                                <span class='campo'><input type='text' id='cursoEspecializacao' maxlength='50'/></span>
+                            </label>
+                            <label for='universidadeEspecializacao'>
+                                <span class='rotulo'>Universidade</span>
+                                <span class='campo'><input type='text' id='universidadeEspecializacao' maxlength='50'/></span>
+                            </label>
+                        </fieldset>
+                    </fieldset>
+                </form>
+            </div>
             <div id='auxContainer'>
                 <table id='calendario' cellspacing='0'>
                     <caption>Calendário</caption>
