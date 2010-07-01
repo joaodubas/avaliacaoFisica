@@ -52,6 +52,6 @@ class Avaliador(models.Model):
     formacao =
     avaliacao =
     data_inicio_trabalho =
-class avaliacao(models.Model):
+class Avaliacao(models.Model):
     data_inicio_avaliacao =
     data_fim_avaliacao =
