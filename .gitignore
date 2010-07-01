@@ -1,0 +1,10 @@
+*.*~
+*.pyc
+*.swp
+*.aux
+*.log
+*.toc
+./log
+.project
+.pydevproject
+.metadata
