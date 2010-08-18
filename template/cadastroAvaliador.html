@@ -1,176 +1,143 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>Cadastro Colaborador ::DBS Monitoramento::</title>
-        <link rel='stylesheet' href='../media/css/reset.css' />
-        <link rel='stylesheet' href='../media/css/text.css' />
-        <link rel='stylesheet' href='../media/css/960.css' />
-        <link rel='stylesheet' href='../media/css/formulario.css' />
-        <link rel='stylesheet' href='../media/css/cabecalho.css' />
-        <link rel='stylesheet' href='../media/css/menu.css' />
-        <style type='text/css'>
-            body {
-                background: #fff url('./img/12_col.gif') center center repeat-y;
-            }
-        </style>
-    </head>
-    <body>
-        <div id='headerContainer'>
-            <div id='header' class='container_12'>
-                <div id='logoContainer' class='grid_3'>
-                    <h1 id='logo'>DBS</h1>
-                    <h2 id='chamada'>Monitoramento</h2>
-                </div>
-                <ul id='menu' class='grid_9'>
-                    <li class='menuItem grid_1 alpha'><a href='#' title='#' accesskey='h'>Home</a></li>
-                    <li class='menuItem grid_1'><a href='#' title='#' accesskey='c'>Cadastro</a></li>
-                    <li class='menuItem grid_1'><a href='#' title='#' accesskey='a'>Avaliação</a></li>
-                    <li class='menuItem grid_1'><a href='#' title='#' accesskey='t'>Treinos</a></li>
-                    <li class='menuItem grid_1'><a href='#' title='#' accesskey='r'>Relatório</a></li>
-                    <li class='menuItem grid_1'><a href='#' title='#' accesskey='g'>Agenda</a></li>
-                    <li class='menuItem grid_1'><a href='#' title='#' accesskey='p'>Protocolo</a></li>
-                    <li class='menuItem grid_1 omega'><a href='#' title='#' accesskey='o'>Contato</a></li>
-                </ul>
-            </div>
-        </div>
-        <div id='contentContainer'>
-            <div id='content' class='container_12'>
-                <div id='tab' class='grid_8 suffix_4'>[conteudo de abas]</div>
-                <div id='conteudo' class='grid_12'>
-                    <div id='formularios' class='grid_8 alpha'>
-                        <form method='post' action='_self' id='cadastroAvaliadores'>
-                            <div class='grid_8 alpha omega'>
-                                <fieldset id='dadosPessoais' class='grid_4 alpha'>
-                                    <legend id='dadosPessoaisLegenda'>Dados Pessoais</legend>
-                                    <label for='primeiroNome'>
-                                        <span class='rotulo grid_4 alpha omega'>Primeiro nome</span>
-                                        <span class='campo grid_3 alpha'><input type='text' id='primeiroNome' maxlength='50'/></span>
-                                    </label>
-                                    <label for='sobreNome'>
-                                        <span class='rotulo grid_4 alpha omega'>Sobrenome</span>
-                                        <span class='campo grid_3 alpha'><input type='text' id='sobreNome' maxlength='50'/></span>
-                                    </label>
-                                    <label for='dataNascimento'>
-                                        <span class='rotulo grid_4 alpha omega'>Data de nascimento</span>
-                                        <span class='campo grid_3 alpha'><input type='text' id='dataNascimento' maxlength='10'/></span>
-                                    </label>
-                                    <fieldset id='generoOpcao' class='grid_4 alpha omega'>
-                                        <legend id='generoOpcaoLegenda'>Gênero</legend>
-                                        <label for='generoFeminino'>
-                                            <span class='checkRadio grid_1 alpha'><input type='radio' id='generoFeminino' name='genero'/></span>
-                                            <span class='rotuloCheckRadio grid_2'>Feminino</span>
-                                        </label>
-                                        <label for='generoMasculino'>
-                                            <span class='checkRadio grid_1 alpha'><input type='radio' id='generoMasculino' name='genero'/></span>
-                                            <span class='rotuloCheckRadio grid_2'>Masculino</span>
-                                        </label>
-                                    </fieldset>
-                                </fieldset>
-                                <fieldset id='dadosContato' class='grid_4 omega'>
-                                    <legend id='dadosContatoLegenda'>Dados Contato</legend>
-                                    <label for='email'>
-                                        <span class='rotulo grid_4 alpha omega'>Email</span>
-                                        <span class='campo grid_3 alpha'><input type='text' id='email' maxlength='50'/></span>
-                                    </label>
-                                    <label for='telefoneResidencial'>
-                                        <span class='rotulo grid_4 alpha omega'>Telefone residencial</span>
-                                        <span class='campo grid_3 alpha'><input type='text' id='telefoneResisdencial' maxlength='13'/></span>
-                                    </label>
-                                    <label for='telefoneComercial'>
-                                        <span class='rotulo grid_4 alpha omega'>Telefone comercial</span>
-                                        <span class='campo grid_3 alpha'><input type='text' id='telefoneComercial' maxlength='13'/></span>
-                                    </label>
-                                    <label for='telefoneCelular'>
-                                        <span class='rotulo grid_4 alpha omega'>Celular</span>
-                                        <span class='campo grid_3 alpha'><input type='text' id='telefoneCelular' maxlength='13'/></span>
-                                    </label>
-                                </fieldset>
-                            </div>
-                            <div class='grid_8 alpha omega'>    
-                                <fieldset id='dadosEndereco' class='grid_4 alpha'>
-                                    <legend id='dadosEnderecoLegend'>Endereço</legend>
-                                    <label for='logradouro'>
-                                        <span class='rotuloSelect grid_4 alpha omega'>Logradouro</span>
-                                        <span class='campo grid_3 alpha'>
-                                            <select id='logradouro'>
-                                                <option value='1'>Rua</option>
-                                                <option value='2'>Avenida</option>
-                                                <option value='3'>Praça</option>
-                                                <option value='4'>Parque</option>
-                                                <option value='5'>Praça</option>
-                                            </select>
-                                        </span>
-                                    </label>
-                                    <label for='endereco'>
-                                        <span class='rotulo grid_4 alpha omega'>Endereço</span>
-                                        <span class='campo grid_3 alpha'><input type='text' id='endereco' maxlength='200'/></span>
-                                    </label>
-                                    <label for='enderecoComplemento'>
-                                        <span class='rotulo grid_4 alpha omega'>Complemento</span>
-                                        <span class='campo grid_3 alpha'><input type='text' id='enderecoComplemento' maxlength='20'/></span>
-                                    </label>
-                                    <label for='bairro'>
-                                        <span class='rotulo grid_4 alpha omega'>Bairro</span>
-                                        <span class='campo grid_3 alpha'><input type='text' id='bairro' maxlength='200'/></span>
-                                    </label>
-                                    <label for='cep'>
-                                        <span class='rotulo grid_4 alpha omega'><abbr title='Código de endereçamento postal'>CEP</abbr></span>
-                                        <span class='campo grid_3 alpha'><input type='text' id='cep' maxlength='9'/></span>
-                                    </label>
-                                    <label for='cidade'>
-                                        <span class='rotulo grid_4 alpha omega'>Cidade</span>
-                                        <span class='campo grid_3 alpha'><input type='text' id='cidade' maxlength='50'/></span>
-                                    </label>
-                                    <label for='estado'>
-                                        <span class='rotuloSelect grid_4 alpha omega'>Estado</span>
-                                        <span class='campo grid_3 alpha'>
-                                            <select id='estado'>
-                                                <option value='1'>AC</option>
-                                                <option value='2'>SP</option>
-                                                <option value='3'>SC</option>
-                                            </select>
-                                        </span>
-                                    </label>
-                                </fieldset>
-                                <fieldset id='dadosTitulacao' class='grid_4 omega'>
-                                    <legend id='dadosTitulacaoLegend'>Titulação</legend>
-                                    <fieldset id='dadosGraduacao'>
-                                        <legend id='dadosGraduacaoLegend'>Graduação</legend>
-                                        <label for='cursoGraduacao'>
-                                            <span class='rotulo grid_4 alpha omega'>Curso</span>
-                                            <span class='campo grid_3 alpha'><input type='text' id='cursoGraduacao' maxlength='50'/></span>
-                                        </label>
-                                        <label for='universidadeGraduacao'>
-                                            <span class='rotulo grid_4 alpha omega'>Universidade</span>
-                                            <span class='campo grid_3 alpha'><input type='text' id='universidadeGraduacao' maxlength='50'/></span>
-                                        </label>
-                                    </fieldset>
-                                    <fieldset id='dadosEspecializacao'>
-                                        <legend id='dadosEspecializacaoLegend'>Especialização</legend>
-                                        <label for='cursoEspecializacao'>
-                                            <span class='rotulo grid_4 alpha omega'>Curso</span>
-                                            <span class='campo grid_3 alpha'><input type='text' id='cursoEspecializacao' maxlength='50'/></span>
-                                        </label>
-                                        <label for='universidadeEspecializacao'>
-                                            <span class='rotulo grid_4 alpha omega'>Universidade</span>
-                                            <span class='campo grid_3 alpha'><input type='text' id='universidadeEspecializacao' maxlength='50'/></span>
-                                        </label>
-                                    </fieldset>
-                                </fieldset>
-                            </div>
-                        </form>
-                    </div>
-                    <div id='calendario' class='grid_4 omega'>Calendário/Alertas</div>
-                </div>
-            </div>
-        </div>
-        <script type='text/javascript' src='../media/js/mootools-1.2.3-core-yc.js'></script>
-        <script type="text/javascript" src='../media/js/biblioteca.js'></script>
-        <script type='text/javascript' src='../media/js/formulario.js'></script>
-        <script type='text/javascript'>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Cadastro Colaborador ::DBS Monitoramento::</title>
+<link rel='stylesheet' href='../media/css/reset.css' />
+<link rel='stylesheet' href='../media/css/text.css' />
+<link rel='stylesheet' href='../media/css/960.css' />
+<link rel='stylesheet' href='../media/css/formulario.css' />
+<link rel='stylesheet' href='../media/css/cabecalho.css' />
+<link rel='stylesheet' href='../media/css/menu.css' />
+<style type='text/css'>
+body {
+    background: #fff url('./img/12_col.gif') center center repeat-y;
+}
+</style>
+</head>
+<body>
+<div id='headerContainer'>
+<div id='header' class='container_12'>
+<div id='logoContainer' class='grid_3'>
+<h1 id='logo'>DBS</h1>
+<h2 id='chamada'>Monitoramento</h2>
+</div>
+<ul id='menu' class='grid_9'>
+    <li class='menuItem grid_1 alpha'><a href='#' title='#' accesskey='h'>Home</a></li>
+    <li class='menuItem grid_1'><a href='#' title='#' accesskey='c'>Cadastro</a></li>
+    <li class='menuItem grid_1'><a href='#' title='#' accesskey='a'>Avaliação</a></li>
+    <li class='menuItem grid_1'><a href='#' title='#' accesskey='t'>Treinos</a></li>
+    <li class='menuItem grid_1'><a href='#' title='#' accesskey='r'>Relatório</a></li>
+    <li class='menuItem grid_1'><a href='#' title='#' accesskey='g'>Agenda</a></li>
+    <li class='menuItem grid_1'><a href='#' title='#' accesskey='p'>Protocolo</a></li>
+    <li class='menuItem grid_1 omega'><a href='#' title='#' accesskey='o'>Contato</a></li>
+</ul>
+</div>
+</div>
+<div id='contentContainer'>
+<div id='content' class='container_12'>
+<div id='tab' class='grid_8 suffix_4'>[conteudo de abas]</div>
+<div id='conteudo' class='grid_12'>
+<div id='formularios' class='grid_8 alpha'>
+<form method='post' action='_self' id='cadastroAvaliadores'>
+<div class='grid_8 alpha omega'>
+<fieldset id='dadosPessoais' class='grid_4 alpha'><legend
+    id='dadosPessoaisLegenda'>Dados Pessoais</legend> <label for='primeiroNome'>
+<span class='rotulo grid_4 alpha omega'>Primeiro nome</span> <span
+    class='campo grid_3 alpha'><input type='text' id='primeiroNome'
+    maxlength='50' /></span> </label> <label for='sobreNome'> <span
+    class='rotulo grid_4 alpha omega'>Sobrenome</span> <span
+    class='campo grid_3 alpha'><input type='text' id='sobreNome'
+    maxlength='50' /></span> </label> <label for='dataNascimento'> <span
+    class='rotulo grid_4 alpha omega'>Data de nascimento</span> <span
+    class='campo grid_3 alpha'><input type='text' id='dataNascimento'
+    maxlength='10' /></span> </label>
+<fieldset id='generoOpcao' class='grid_4 alpha omega'><legend
+    id='generoOpcaoLegenda'>Gênero</legend> <label for='generoFeminino'>
+<span class='checkRadio grid_1 alpha'><input type='radio'
+    id='generoFeminino' name='genero' /></span> <span class='rotuloCheckRadio grid_2'>Feminino</span>
+</label> <label for='generoMasculino'> <span class='checkRadio grid_1 alpha'><input
+    type='radio' id='generoMasculino' name='genero' /></span> <span
+    class='rotuloCheckRadio grid_2'>Masculino</span> </label></fieldset>
+</fieldset>
+<fieldset id='dadosContato' class='grid_4 omega'><legend
+    id='dadosContatoLegenda'>Dados Contato</legend> <label for='email'>
+<span class='rotulo grid_4 alpha omega'>Email</span> <span
+    class='campo grid_3 alpha'><input type='text' id='email'
+    maxlength='50' /></span> </label> <label for='telefoneResidencial'> <span
+    class='rotulo grid_4 alpha omega'>Telefone residencial</span> <span
+    class='campo grid_3 alpha'><input type='text'
+    id='telefoneResisdencial' maxlength='13' /></span> </label> <label for='telefoneComercial'>
+<span class='rotulo grid_4 alpha omega'>Telefone comercial</span> <span
+    class='campo grid_3 alpha'><input type='text' id='telefoneComercial'
+    maxlength='13' /></span> </label> <label for='telefoneCelular'> <span
+    class='rotulo grid_4 alpha omega'>Celular</span> <span
+    class='campo grid_3 alpha'><input type='text' id='telefoneCelular'
+    maxlength='13' /></span> </label></fieldset>
+</div>
+<div class='grid_8 alpha omega'>
+<fieldset id='dadosEndereco' class='grid_4 alpha'><legend
+    id='dadosEnderecoLegend'>Endereço</legend> <label for='logradouro'>
+<span class='rotuloSelect grid_4 alpha omega'>Logradouro</span> <span
+    class='campo grid_3 alpha'> <select id='logradouro'>
+    <option value='1'>Rua</option>
+    <option value='2'>Avenida</option>
+    <option value='3'>Praça</option>
+    <option value='4'>Parque</option>
+    <option value='5'>Praça</option>
+</select> </span> </label> <label for='endereco'> <span class='rotulo grid_4 alpha omega'>Endereço</span>
+<span class='campo grid_3 alpha'><input type='text' id='endereco'
+    maxlength='200' /></span> </label> <label for='enderecoComplemento'> <span
+    class='rotulo grid_4 alpha omega'>Complemento</span> <span
+    class='campo grid_3 alpha'><input type='text'
+    id='enderecoComplemento' maxlength='20' /></span> </label> <label for='bairro'> <span
+    class='rotulo grid_4 alpha omega'>Bairro</span> <span
+    class='campo grid_3 alpha'><input type='text' id='bairro'
+    maxlength='200' /></span> </label> <label for='cep'> <span
+    class='rotulo grid_4 alpha omega'><abbr
+    title='Código de endereçamento postal'>CEP</abbr></span> <span
+    class='campo grid_3 alpha'><input type='text' id='cep' maxlength='9' /></span>
+</label> <label for='cidade'> <span class='rotulo grid_4 alpha omega'>Cidade</span>
+<span class='campo grid_3 alpha'><input type='text' id='cidade'
+    maxlength='50' /></span> </label> <label for='estado'> <span
+    class='rotuloSelect grid_4 alpha omega'>Estado</span> <span
+    class='campo grid_3 alpha'> <select id='estado'>
+    <option value='1'>AC</option>
+    <option value='2'>SP</option>
+    <option value='3'>SC</option>
+</select> </span> </label></fieldset>
+<fieldset id='dadosTitulacao' class='grid_4 omega'><legend
+    id='dadosTitulacaoLegend'>Titulação</legend>
+<fieldset id='dadosGraduacao'><legend id='dadosGraduacaoLegend'>Graduação</legend>
+<label for='cursoGraduacao'> <span class='rotulo grid_4 alpha omega'>Curso</span>
+<span class='campo grid_3 alpha'><input type='text' id='cursoGraduacao'
+    maxlength='50' /></span> </label> <label for='universidadeGraduacao'> <span
+    class='rotulo grid_4 alpha omega'>Universidade</span> <span
+    class='campo grid_3 alpha'><input type='text'
+    id='universidadeGraduacao' maxlength='50' /></span> </label></fieldset>
+<fieldset id='dadosEspecializacao'><legend
+    id='dadosEspecializacaoLegend'>Especialização</legend> <label
+    for='cursoEspecializacao'> <span class='rotulo grid_4 alpha omega'>Curso</span>
+<span class='campo grid_3 alpha'><input type='text'
+    id='cursoEspecializacao' maxlength='50' /></span> </label> <label
+    for='universidadeEspecializacao'> <span
+    class='rotulo grid_4 alpha omega'>Universidade</span> <span
+    class='campo grid_3 alpha'><input type='text'
+    id='universidadeEspecializacao' maxlength='50' /></span> </label></fieldset>
+</fieldset>
+</div>
+</form>
+</div>
+<div id='calendario' class='grid_4 omega'>Calendário/Alertas</div>
+</div>
+</div>
+</div>
+<script type='text/javascript' src='../media/js/mootools-1.2.3-core-yc.js'></script>
+<script type="text/javascript" src='../media/js/biblioteca.js'></script>
+<script type='text/javascript' src='../media/js/formulario.js'></script>
+<script type='text/javascript'>
             formatForm.elmInputValue('cadastroAvaliadores');
         </script>
-    </body>
+</body>
 </html>

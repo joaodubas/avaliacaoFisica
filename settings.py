@@ -1,18 +1,20 @@
+import os
+
 # Django settings for avaliacaoFisica project.
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@domain.com'),
+    ('Joao Paulo Dubas', 'joao.dubas@dbsdev.com.br'),
 )
 
 MANAGERS = ADMINS
 
-DATABASE_ENGINE = ''           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-DATABASE_NAME = ''             # Or path to database file if using sqlite3.
-DATABASE_USER = ''             # Not used with sqlite3.
-DATABASE_PASSWORD = ''         # Not used with sqlite3.
+DATABASE_ENGINE = 'mysql'           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+DATABASE_NAME = 'programa_avaliacao'             # Or path to database file if using sqlite3.
+DATABASE_USER = 'joaodubas'             # Not used with sqlite3.
+DATABASE_PASSWORD = 'anaeloisa'         # Not used with sqlite3.
 DATABASE_HOST = ''             # Set to empty string for localhost. Not used with sqlite3.
 DATABASE_PORT = ''             # Set to empty string for default. Not used with sqlite3.
 
@@ -21,11 +23,11 @@ DATABASE_PORT = ''             # Set to empty string for default. Not used with 
 # although not all choices may be available on all operating systems.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = 'America/Chicago'
+TIME_ZONE = 'America/Sao_Paulo'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-br'
 
 SITE_ID = 1
 

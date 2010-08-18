@@ -4,28 +4,31 @@ Stephen Clark
 www.sgclark.com/sandbox/minislide
 ----------------------------------------------------------------------- */
 .nav {
-    padding:10px 0px 0px 0;
+    padding: 10px 0px 0px 0;
     margin: 0 0 20px 0;
-    float:left;
-    width:100%;
-    border-bottom:1px solid #888888;
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #888888;
 }
+
 #minislide {
     float: left;
     margin: 0;
     padding: 0px 10px 0px 10px;
-    position:relative;
-    z-index:2;
+    position: relative;
+    z-index: 2;
 }
+
 #minislide li {
     float: left;
     margin: 0;
     padding: 0;
     display: inline;
     list-style: none;
-    position:relative;
+    position: relative;
 }
-#minislide a:link, #minislide a:visited {
+
+#minislide a:link,#minislide a:visited {
     float: left;
     line-height: 19px;
     font-weight: bold;
@@ -33,16 +36,19 @@ www.sgclark.com/sandbox/minislide
     text-decoration: none;
     color: #888888;
 }
-#minislide a.active:link, #minislide a.active:visited {
+
+#minislide a.active:link,#minislide a.active:visited {
     border-bottom: 5px solid #888888;
     padding-bottom: 1px;
     color: #888888;
 }
+
 #minislide a:hover {
     border-bottom: 5px solid #888888;
     padding-bottom: 1px;
     color: #888888;
 }
+
 #animated-tab {
     position: absolute;
     z-index: 1;
@@ -50,8 +56,9 @@ www.sgclark.com/sandbox/minislide
     line-height: 19px;
     padding-bottom: 1px;
     border-bottom: 5px solid #888888;
-    width:100%;
+    width: 100%;
 }
+
 br {
-    clear:both;
+    clear: both;
 }
